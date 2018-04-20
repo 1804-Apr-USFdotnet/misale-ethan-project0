@@ -1,0 +1,6 @@
+D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\bin\Debug\RestaurantReviews.Library.dll
+D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\bin\Debug\RestaurantReviews.Library.pdb
+D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\obj\Debug\RestaurantReviews.Library.csprojResolveAssemblyReference.cache
+D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\obj\Debug\RestaurantReviews.Library.csproj.CoreCompileInputs.cache
+D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\obj\Debug\RestaurantReviews.Library.dll
+D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\obj\Debug\RestaurantReviews.Library.pdb
