@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 namespace Palindrome
 
 {
-    class PalindromeCheck
+    public class PalindromeCheck
     {
-         static bool PalindromeChecker(string pali)
+         public static bool PalindromeChecker(string pali)
         {
+            
             int min = 0;
             int max = pali.Length - 1;
             while (true)
