@@ -9,5 +9,8 @@ namespace RestaurantReviews.Library
     public class Review
     {
         public float Rating { get; set; }
+        public string Comment { get; set; }
     }
+
+
 }

@@ -1,0 +1,78 @@
+[{
+  "Name": "Miboo",
+  "Address": "9 5th Hill",
+  "City": "Clearwater",
+  "State": "Florida",
+  "PhoneNumber": "727-962-8551",
+  "Reviews" :[
+	{"Rating": "4.5",
+	"Comment": "Restaurant was great"}]
+}, {
+  "Name": "Yakidoo",
+  "Address": "5 Tennessee Avenue",
+  "City": "Bradenton",
+  "State": "Florida",
+  "PhoneNumber": "941-412-3214",
+  "Reviews" :[
+	{"Rating": "4.5",
+	"Comment": "Restaurant was great"},
+	{"Rating": "4",
+	 "Comment": "Had a good time, great dinner"},
+	{"Rating": "3",
+	 "Comment": "Had a good time, great dinner"},
+	{"Rating": "4",
+	 "Comment": "Had a good time, great dinner"},
+	{"Rating": "2",
+	 "Comment": "Food was cold"}]
+}, {
+  "Name": "Photobean",
+  "Address": "43 Stuart Drive",
+  "City": "Miami",
+  "State": "Florida",
+  "PhoneNumber": "305-997-2303",
+  "Reviews" :[
+	{"Rating": "4.5",
+	"Comment": "Restaurant was great"},
+	{"Rating": "4",
+	 "Comment": "Had a good time, great dinner"},
+	{"Rating": "3",
+	 "Comment": "Had a good time, great dinner"},
+	{"Rating": "4",
+	 "Comment": "Had a good time, great dinner"},
+	{"Rating": "2",
+	 "Comment": "Food was cold"}]
+}, {
+  "Name": "Jabbertype",
+  "Address": "90379 Bellgrove Junction",
+  "City": "Homestead",
+  "State": "Florida",
+  "PhoneNumber": "305-864-0548",
+  "Reviews" :[
+	{"Rating": "4.5",
+	"Comment": "Restaurant was great"},
+	{"Rating": "4",
+	 "Comment": "Had a good time, great dinner"},
+	{"Rating": "3",
+	 "Comment": "Had a good time, great dinner"},
+	{"Rating": "4",
+	 "Comment": "Had a good time, great dinner"},
+	{"Rating": "2",
+	 "Comment": "Food was cold"}]
+}, {
+  "Name": "Blogtags",
+  "Address": "4176 Transport Avenue",
+  "City": "Panama City",
+  "State": "Florida",
+  "PhoneNumber": "850-305-1338",
+  "Reviews" :[
+	{"Rating": "4.5",
+	"Comment": "Restaurant was great"},
+	{"Rating": "4",
+	 "Comment": "Had a good time, great dinner"},
+	{"Rating": "3",
+	 "Comment": "Had a good time, great dinner"},
+	{"Rating": "4",
+	 "Comment": "Had a good time, great dinner"},
+	{"Rating": "2",
+	 "Comment": "Food was cold"}]
+}]

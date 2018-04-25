@@ -4,3 +4,8 @@ D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\ob
 D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\obj\Debug\RestaurantReviews.Library.csproj.CoreCompileInputs.cache
 D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\obj\Debug\RestaurantReviews.Library.dll
 D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\obj\Debug\RestaurantReviews.Library.pdb
+D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\bin\Debug\Json.dll
+D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\bin\Debug\Newtonsoft.Json.dll
+D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\bin\Debug\Json.pdb
+D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\bin\Debug\Newtonsoft.Json.xml
+D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\obj\Debug\RestaurantReviews.Library.csproj.CopyComplete

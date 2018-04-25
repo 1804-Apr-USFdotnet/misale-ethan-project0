@@ -8,7 +8,7 @@ namespace RestaurantReviews.Library.Interfaces
 {
     interface IReviewable
     {
-        void AddReview(Review rate);
+        
         float CalculateAverageRating();
 
     }
