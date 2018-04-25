@@ -41,11 +41,6 @@ namespace RestaurantReviews.Library
 
         }
 
-        public List<Review> DeserializeReview(string file)
-        {
-            return DeseralizeItems.
-                Deseralize<List<Review>>(file);
-        }
 
         public void AddReview(Review review)
         {

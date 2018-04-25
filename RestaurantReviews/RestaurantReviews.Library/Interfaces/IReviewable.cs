@@ -10,6 +10,7 @@ namespace RestaurantReviews.Library.Interfaces
     {
         
         float CalculateAverageRating();
+        void AddReview(Review review);
 
     }
 }
