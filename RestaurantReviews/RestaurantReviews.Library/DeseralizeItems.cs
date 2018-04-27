@@ -10,7 +10,7 @@ namespace RestaurantReviews.Library
 {
     public static class DeseralizeItems
     {
-
+        
         public static T Deseralize<T>(string file)
         {
             T result = JsonConvert.DeserializeObject<T>(File.ReadAllText(file));

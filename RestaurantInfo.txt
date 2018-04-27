@@ -6,7 +6,15 @@
   "PhoneNumber": "727-962-8551",
   "Reviews" :[
 	{"Rating": "4.5",
-	"Comment": "Restaurant was great"}]
+	"Comment": "Restaurant was great"},
+	{"Rating": "4",
+	 "Comment": "Had a good time, great dinner"},
+	{"Rating": "3",
+	 "Comment": "Had a good time, great dinner"},
+	{"Rating": "4",
+	 "Comment": "Had a good time, great dinner"},
+	{"Rating": "2",
+	 "Comment": "Food was cold"}]
 }, {
   "Name": "Yakidoo",
   "Address": "5 Tennessee Avenue",

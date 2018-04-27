@@ -6,13 +6,13 @@ using System.Collections.Generic;
 namespace RestaurantReviewsTest
 {
     [TestClass]
-    public class UnitTest1
+    public class GetRestaurants_Test
     {
         [TestMethod]
-        public void DeseralizeItems_Test()
+        public void GetRestaurantsUsingClass_Test()
         {
+            List<Restaurant> restTest = new List<Restaurant>(RestaurantGet.GetRestaurants());
            
-            List<Restaurant> restTest = DeseralizeItems.Deseralize<List<Restaurant>>(@"D:\revature\misale-ethan-project0\RestaurantInfo.txt");
 
             Restaurant expected = new Restaurant
             {
@@ -26,8 +26,10 @@ namespace RestaurantReviewsTest
 
 
             };
-            expected.AddReview(new Review { Rating = 4.5f,
-            Comment="Restaurant was great"
+            expected.AddReview(new Review
+            {
+                Rating = 4.5f,
+                Comment = "Restaurant was great"
             });
 
             bool areTheyEqual = false;
@@ -40,9 +42,6 @@ namespace RestaurantReviewsTest
             //    //compare Reviews
             //}
             Assert.IsTrue(areTheyEqual);
-                
-
-
         }
     }
 }

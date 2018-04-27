@@ -11,10 +11,10 @@ using Newtonsoft.Json;
         
 namespace RestaurantReviews.Library
 {      
-     
+    
     public class Restaurant:IReviewable
     {
-         
+        
         public string  Name { get; set; }
         
         public string Address { get; set; }
@@ -26,24 +26,27 @@ namespace RestaurantReviews.Library
         public string City { get; set; }
      
         public string State { get; set; }
-        
+        [JsonIgnore]
+        public float AvgRating { get; set; }
 
         public float CalculateAverageRating()
         {
-            float sum = 0f;
+            AvgRating = 0f;
             
             foreach(var i in Reviews)
             {
-                sum += i.Rating;
+                AvgRating += i.Rating;
             }
 
-            return sum / Reviews.Count;
+            return AvgRating /= Reviews.Count;
 
         }
 
 
+
         public void AddReview(Review review)
         {
+
             Reviews.Add(review);
         }
 
