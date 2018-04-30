@@ -33,6 +33,47 @@ namespace RestaurantReviews.Library
             return show;
         }
 
+        public void InsertRestaurant(RestaurantReviews.Models.Restaurant restaurant)
+        {
+            crud.InsertRestaurant(restaurant);
+        }
 
+        public void DeleteRestaurant(int id)
+        {
+           crud.DeleteRestaurant(id);
+        }
+
+        public IEnumerable<Models.Review> ShowReviews()
+        {
+
+            var show = crud.ShowReviews();
+            var test = new List<Models.Review>();
+            foreach (Review rev in show)
+            {
+                var show1 = crud.DataToLibraryReview(rev);
+                test.Add(show1);
+            }
+
+            return test;
+
+        }
+
+
+        public Models.Review SearchByReviewtID(int id)
+        {
+            var search = crud.SearchByReviewID(id);
+            var show = crud.DataToLibraryReview(search);
+            return show;
+        }
+
+        public void InsertRestaurant(RestaurantReviews.Models.Review review)
+        {
+            crud.InsertReview(review);
+        }
+
+        public void DeleteReview(int id)
+        {
+            crud.DeleteReview(id);
+        }
     }
 }
