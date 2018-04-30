@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestaurantReviews.Library;
 using System.Collections.Generic;
+using RestaurantReviews.Models;
 
 namespace RestaurantReviewsTest
 {

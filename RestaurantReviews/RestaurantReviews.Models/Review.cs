@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RestaurantReviews.Library
+namespace RestaurantReviews.Models
 {
     public class Review
     {
-        public float Rating { get; set; }
+        public int Id { get; set; }
+        public double Rating { get; set; }
         public string Comment { get; set; }
+        public int RestaurantId { get; set; }
     }
 
 

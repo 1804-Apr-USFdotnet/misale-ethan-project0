@@ -9,3 +9,11 @@ D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\bi
 D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\bin\Debug\Json.pdb
 D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\bin\Debug\Newtonsoft.Json.xml
 D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\obj\Debug\RestaurantReviews.Library.csproj.CopyComplete
+D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\bin\Debug\RestaurantReviews.Model.dll
+D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\bin\Debug\RestaurantReviews.Model.pdb
+D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\bin\Debug\RestaurantReviews.Library.dll.config
+D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\bin\Debug\RestuarantReviews.DAL.dll
+D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\bin\Debug\EntityFramework.dll
+D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\bin\Debug\RestuarantReviews.DAL.pdb
+D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\bin\Debug\RestuarantReviews.DAL.dll.config
+D:\revature\misale-ethan-project0\RestaurantReviews\RestaurantReviews.Library\bin\Debug\EntityFramework.xml

@@ -61,6 +61,10 @@
       <Project>{e12e2b3e-af34-4ae2-998a-dc6aa020bf17}</Project>
       <Name>RestaurantReviews.Library</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RestaurantReviews.Model\RestaurantReviews.Models.csproj">
+      <Project>{7ca1a66d-ce34-4eee-894e-8a4684bb84d4}</Project>
+      <Name>RestaurantReviews.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

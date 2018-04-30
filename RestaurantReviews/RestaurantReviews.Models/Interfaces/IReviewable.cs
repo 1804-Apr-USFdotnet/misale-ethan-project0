@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RestaurantReviews.Library.Interfaces
+namespace RestaurantReviews.Models.Interfaces
 {
     interface IReviewable
     {
         
-        float CalculateAverageRating();
+        double CalculateAverageRating();
         void AddReview(Review review);
 
     }

@@ -1,4 +1,4 @@
-﻿using RestaurantReviews.Library.Interfaces;
+﻿using RestaurantReviews.Models.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,12 +9,13 @@ using Newtonsoft.Json;
 
 
         
-namespace RestaurantReviews.Library
+namespace RestaurantReviews.Models
 {      
     
     public class Restaurant:IReviewable
     {
-        
+        public int Id { get; set; }
+
         public string  Name { get; set; }
         
         public string Address { get; set; }
@@ -27,11 +28,11 @@ namespace RestaurantReviews.Library
      
         public string State { get; set; }
         [JsonIgnore]
-        public float AvgRating { get; set; }
+        public double AvgRating { get; set; }
 
-        public float CalculateAverageRating()
+        public double CalculateAverageRating()
         {
-            AvgRating = 0f;
+            AvgRating = 0;
             
             foreach(var i in Reviews)
             {
