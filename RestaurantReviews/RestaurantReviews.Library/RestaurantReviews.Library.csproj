@@ -57,8 +57,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RestaurantReviews.Model\RestaurantReviews.Models.csproj">
-      <Project>{7ca1a66d-ce34-4eee-894e-8a4684bb84d4}</Project>
+    <ProjectReference Include="..\RestaurantReviews.Models\RestaurantReviews.Models.csproj">
+      <Project>{a91ea4ec-9a14-4c29-8967-0193830c1506}</Project>
       <Name>RestaurantReviews.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\RestuarantReviews.DAL\RestuarantReviews.DAL.csproj">

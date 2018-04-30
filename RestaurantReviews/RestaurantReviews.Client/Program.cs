@@ -53,11 +53,11 @@ namespace RestaurantReviews.Client
 
 
             RestaurantDataAccess access = new RestaurantDataAccess();
-            var show = access.ShowRestaurants();
+            var show = access.SortTop3Rating();
 
             foreach(Restaurant rest in show)
             {
-                Console.WriteLine("Restaurant name: " + rest.Name);
+                Console.WriteLine("Restaurant name: " + rest.Name + " AVG Rating: " + rest.AvgRating);
             }
                
 

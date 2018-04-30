@@ -50,8 +50,9 @@ namespace RestuarantReviews.DAL
                 PhoneNumber = restaurant.PhoneNumber,
                 State = restaurant.State,
                 Id = restaurant.Id,
-                Name = restaurant.Name
-
+                Name = restaurant.Name,
+               
+                
             };
 
             return rest;
@@ -66,8 +67,8 @@ namespace RestuarantReviews.DAL
                 PhoneNumber = restaurant.PhoneNumber,
                 State = restaurant.State,
                 Id = restaurant.Id,
-                Name = restaurant.Name
-
+                Name = restaurant.Name,
+                AvgRating = (double)(restaurant.AvgRating)
             };
 
             return rest;
