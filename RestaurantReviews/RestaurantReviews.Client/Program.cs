@@ -62,38 +62,6 @@ namespace RestaurantReviews.Client
                 Console.WriteLine("Restaurant name: " + rest.Name + " AVG Rating: " + rest.AvgRating);
             }
 
-
-
-
-            //}
-
-            //var sortedAscend = access.SortAscending();
-            //foreach (Restaurant rest in sortedAscend)
-            //{
-            //    Console.WriteLine("Restaurant name: " + rest.Name);
-            //}
-
-            //var sortedDescend = SortDescending();
-            //foreach (Restaurant rest in sortedDescend)
-            //{
-            //    Console.WriteLine("Restaurant name: " + rest.Name);
-            //}
-
-
-
-            //     Console.WriteLine("Restaurant name: " + rest.Name + " Average Rating: " + rest.AvgRating);
-            //}
-            //// foreach (RestaurantReviews.DAL.Restaurant rest in restaurantCRUD.ShowRestaurants())
-            //// {
-            //// Console.WriteLine("Restaurant name: " + rest.Name);
-            ////}
-
-            //var part = restaurantCRUD.SearchByPartialName("Bl");
-            //foreach(RestaurantReviews.DAL.Restaurant rest in part)
-            //{
-            //    Console.WriteLine("Restaurant name: " + rest.Name );
-            //}
-
         }
     }
 }
