@@ -32,20 +32,19 @@ namespace RestaurantReviews.Models
 
         public double CalculateAverageRating()
         {
+
             AvgRating = 0;
-            
-            foreach(var i in Reviews)
+
+            foreach (var i in Reviews)
             {
                 AvgRating += i.Rating;
             }
 
-            return AvgRating /= Reviews.Count;
-
+            return (double)(AvgRating /= Reviews.Count);
         }
 
 
-
-        public void AddReview(Review review)
+            public void AddReview(Review review)
         {
 
             Reviews.Add(review);

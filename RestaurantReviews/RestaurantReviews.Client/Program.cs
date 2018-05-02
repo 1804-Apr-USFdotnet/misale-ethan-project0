@@ -53,29 +53,31 @@ namespace RestaurantReviews.Client
 
 
             RestaurantDataAccess access = new RestaurantDataAccess();
-            //var show = access.SortTop3Rating();
+            
+            
+            List<Restaurant> show = (List<Restaurant>)access.ShowRestaurants();
+            var sortTop = Sort1.SortTop3Rating(show);
+            foreach(Restaurant rest in sortTop)
+            {
+                Console.WriteLine("Restaurant name: " + rest.Name + " AVG Rating: " + rest.AvgRating);
+            }
 
-            //foreach(Restaurant rest in show)
+
+
+
+            //}
+
+            //var sortedAscend = access.SortAscending();
+            //foreach (Restaurant rest in sortedAscend)
             //{
-            //    Console.WriteLine("Restaurant name: " + rest.Name + " AVG Rating: " + rest.AvgRating);
+            //    Console.WriteLine("Restaurant name: " + rest.Name);
             //}
 
-
-
-
+            //var sortedDescend = SortDescending();
+            //foreach (Restaurant rest in sortedDescend)
+            //{
+            //    Console.WriteLine("Restaurant name: " + rest.Name);
             //}
-
-            var sortedAscend = access.SortAscending();
-            foreach (Restaurant rest in sortedAscend)
-            {
-                Console.WriteLine("Restaurant name: " + rest.Name);
-            }
-
-            var sortedDescend = access.SortDescending();
-            foreach (Restaurant rest in sortedDescend)
-            {
-                Console.WriteLine("Restaurant name: " + rest.Name);
-            }
 
 
 

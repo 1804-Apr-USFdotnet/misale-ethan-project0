@@ -58,7 +58,7 @@
     <Compile Include="DeseralizeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GetRestaurants_Test.cs" />
-    <Compile Include="TestsforDataAccess.cs" />
+    <Compile Include="TestsforSort.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -27,9 +27,9 @@ namespace RestuarantReviews.DAL
 
         }
 
-        public void InsertRestaurant(RestaurantReviews.Models.Restaurant restaurant)
+        public void InsertRestaurant(Restaurant restaurant)
         {
-            db.Restaurants.Add(LibraryToDataRestaurant(restaurant));
+            db.Restaurants.Add(restaurant);
             db.SaveChanges();
         }
 
@@ -41,45 +41,6 @@ namespace RestuarantReviews.DAL
 
         }
 
-        public Restaurant LibraryToDataRestaurant(RestaurantReviews.Models.Restaurant restaurant)
-        {
-            Restaurant rest = new Restaurant()
-            {
-                Address = restaurant.Address,
-                City = restaurant.City,
-                PhoneNumber = restaurant.PhoneNumber,
-                State = restaurant.State,
-                Id = restaurant.Id,
-                Name = restaurant.Name,
-               
-                
-            };
-
-            return rest;
-        }
-
-        public RestaurantReviews.Models.Restaurant DataToLibraryRestaurant(Restaurant restaurant)
-        {
-            RestaurantReviews.Models.Restaurant rest = new RestaurantReviews.Models.Restaurant()
-            {
-                Address = restaurant.Address,
-                City = restaurant.City,
-                PhoneNumber = restaurant.PhoneNumber,
-                State = restaurant.State,
-                Id = restaurant.Id,
-                Name = restaurant.Name
-            };
-                if (restaurant.AvgRating is null) {
-                rest.AvgRating = 0;
-                }
-                 else
-                {
-                rest.AvgRating = (double)(restaurant.AvgRating);
-                }
-            
-
-            return rest;
-        }
 
         public IEnumerable<Review> ShowReviews()
         {
@@ -93,9 +54,9 @@ namespace RestuarantReviews.DAL
         }
 
 
-        public void InsertReview(RestaurantReviews.Models.Review review)
+        public void InsertReview(RestuarantReviews.DAL.Review review)
         {
-            db.Reviews.Add(LibrayToDataReview(review));
+            db.Reviews.Add(review);
             db.SaveChanges();
         }
 
@@ -106,33 +67,7 @@ namespace RestuarantReviews.DAL
             db.SaveChanges();
 
         }
-        public Review LibrayToDataReview(RestaurantReviews.Models.Review review)
-        {
-            Review rev = new Review()
-            {
-                Id = review.Id,
-                Comment = review.Comment,
-                RestaurantId = review.RestaurantId,
-                Rating = review.Rating
-
-            };
-
-            return rev;
-        }
-
-        public RestaurantReviews.Models.Review DataToLibraryReview(Review review)
-        {
-            RestaurantReviews.Models.Review rev = new RestaurantReviews.Models.Review()
-            {
-                Id = review.Id,
-                Comment = review.Comment,
-                RestaurantId = review.RestaurantId,
-                Rating = review.Rating
-            };
-
-            return rev;
-
-        }
+       
 
         public IEnumerable<Restaurant> SearchByPartialName(string name)
         {

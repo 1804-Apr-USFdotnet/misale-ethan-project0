@@ -72,7 +72,6 @@
     <Compile Include="Review.cs">
       <DependentUpon>RestaurantReviews.tt</DependentUpon>
     </Compile>
-    <Compile Include="Sort.cs" />
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
       <DependentUpon>RestaurantReviews.tt</DependentUpon>
     </Compile>

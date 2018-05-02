@@ -20,7 +20,7 @@ namespace RestaurantReviews.Library
            var test = new List<Models.Restaurant>();
            foreach(Restaurant rest in show)
             {
-                var show1 = crud.DataToLibraryRestaurant(rest);
+                var show1 = DataToLibraryRestaurant(rest);
                 test.Add(show1);
             }
 
@@ -31,13 +31,14 @@ namespace RestaurantReviews.Library
         public Models.Restaurant SearchByRestaurantID(int id)
         {
            var search = crud.SearchByRestaurantID(id);
-            var show =  crud.DataToLibraryRestaurant(search);
-            return show;
+           var show =  DataToLibraryRestaurant(search);
+           return show;
         }
 
         public void InsertRestaurant(RestaurantReviews.Models.Restaurant restaurant)
         {
-            crud.InsertRestaurant(restaurant);
+            var rest = LibraryToDataRestaurant(restaurant);
+            crud.InsertRestaurant(rest);
         }
 
         public void DeleteRestaurant(int id)
@@ -52,7 +53,7 @@ namespace RestaurantReviews.Library
             var test = new List<Models.Review>();
             foreach (Review rev in show)
             {
-                var show1 = crud.DataToLibraryReview(rev);
+                var show1 = DataToLibraryReview(rev);
                 test.Add(show1);
             }
 
@@ -64,13 +65,14 @@ namespace RestaurantReviews.Library
         public Models.Review SearchByReviewtID(int id)
         {
             var search = crud.SearchByReviewID(id);
-            var show = crud.DataToLibraryReview(search);
+            var show = DataToLibraryReview(search);
             return show;
         }
 
         public void InsertRestaurant(RestaurantReviews.Models.Review review)
         {
-            crud.InsertReview(review);
+            var convert = LibraryToDataReview(review);
+            crud.InsertReview(convert);
         }
 
         public void DeleteReview(int id)
@@ -85,65 +87,92 @@ namespace RestaurantReviews.Library
             var test = new List<Models.Restaurant>();
             foreach (Restaurant rest in part)
             {
-                var show1 = crud.DataToLibraryRestaurant(rest);
+                var show1 = DataToLibraryRestaurant(rest);
                 test.Add(show1);
             }
             return test;
         }
 
-        public IEnumerable<Models.Restaurant> SortAscending()
-        {
-            
-            var result = new List<Models.Restaurant>();
-            var sorted = Sort.SortAscending();
-            foreach(Restaurant rest in sorted)
-            {
-                var show1 = crud.DataToLibraryRestaurant(rest);
-                result.Add(show1);
 
+        public static Restaurant LibraryToDataRestaurant(RestaurantReviews.Models.Restaurant restaurant)
+        {
+            var revs = new List<Review>();
+            foreach (Models.Review rev in restaurant.Reviews)
+            {
+                revs.Add(LibraryToDataReview(rev));
             }
-            return result;
+            Restaurant rest = new Restaurant()
+            {
+                Address = restaurant.Address,
+                City = restaurant.City,
+                PhoneNumber = restaurant.PhoneNumber,
+                State = restaurant.State,
+                Id = restaurant.Id,
+                Name = restaurant.Name,
+
+
+            };
+
+            return rest;
         }
 
-        public IEnumerable<Models.Restaurant> SortDescending()
+        public static RestaurantReviews.Models.Restaurant DataToLibraryRestaurant(Restaurant restaurant)
         {
-
-            var result = new List<Models.Restaurant>();
-            var sorted = Sort.SortDescending();
-            foreach (Restaurant rest in sorted)
+            var revs = new List<Models.Review>();
+            foreach (Review rev in restaurant.Reviews)
             {
-                var show1 = crud.DataToLibraryRestaurant(rest);
-                result.Add(show1);
-
+                revs.Add(DataToLibraryReview(rev));
             }
-            return result;
+            RestaurantReviews.Models.Restaurant rest = new RestaurantReviews.Models.Restaurant()
+            {
+                Address = restaurant.Address,
+                City = restaurant.City,
+                PhoneNumber = restaurant.PhoneNumber,
+                State = restaurant.State,
+                Id = restaurant.Id,
+                Name = restaurant.Name,
+                Reviews = revs
+
+            };
+            if (restaurant.AvgRating is null)
+            {
+                rest.AvgRating = 0;
+            }
+            else
+            {
+                rest.AvgRating = (double)(restaurant.AvgRating);
+            }
+
+
+            return rest;
         }
 
-        public IEnumerable<Models.Restaurant> SortTopRating()
+        public static Review LibraryToDataReview(RestaurantReviews.Models.Review review)
         {
-
-            var result = new List<Models.Restaurant>();
-            var sorted = Sort.SortTopRating();
-            foreach (Restaurant rest in sorted)
+            Review rev = new Review()
             {
-                var show1 = crud.DataToLibraryRestaurant(rest);
-                result.Add(show1);
+                Id = review.Id,
+                Comment = review.Comment,
+                RestaurantId = review.RestaurantId,
+                Rating = review.Rating
 
-            }
-            return result;
+            };
+
+            return rev;
         }
-        public IEnumerable<Models.Restaurant> SortTop3Rating()
+
+        public static RestaurantReviews.Models.Review DataToLibraryReview(Review review)
         {
-
-            var result = new List<Models.Restaurant>();
-            var sorted = Sort.SortTop3Rating();
-            foreach (Restaurant rest in sorted)
+            RestaurantReviews.Models.Review rev = new RestaurantReviews.Models.Review()
             {
-                var show1 = crud.DataToLibraryRestaurant(rest);
-                result.Add(show1);
+                Id = review.Id,
+                Comment = review.Comment,
+                RestaurantId = review.RestaurantId,
+                Rating = review.Rating
+            };
 
-            }
-            return result;
+            return rev;
+
         }
     }
 }
