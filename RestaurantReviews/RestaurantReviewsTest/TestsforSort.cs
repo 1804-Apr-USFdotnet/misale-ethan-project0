@@ -3,6 +3,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestaurantReviews.Library;
 using RestaurantReviews.Models;
 using System.Collections.Generic;
+using NLog.Config;
+using NLog;
+using NLog.Targets;
 
 namespace RestaurantReviewsTest
 {
@@ -131,6 +134,7 @@ namespace RestaurantReviewsTest
         [TestMethod]
         public void SortTopRating()
         {
+            Logger log = LogManager.GetCurrentClassLogger();
 
             reviews1.Add(review1);
             reviews1.Add(review2);
@@ -146,8 +150,9 @@ namespace RestaurantReviewsTest
             List<Restaurant> sortedList = (List<Restaurant>)Sort1.SortTopRating(restaurants);
             Restaurant actual = restaurants[2];
             Restaurant expected = sortedList[0];
-
+           
             Assert.AreEqual(expected, actual);
+            log.Info("Test Passed");
         }
 
         [TestMethod]

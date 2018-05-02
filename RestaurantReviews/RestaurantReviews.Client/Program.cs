@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using RestaurantReviews.Library;
 using RestaurantReviews.Models;
+using NLog;
+using NLog.Config;
+using NLog.Targets;
 
 
 
@@ -53,15 +56,15 @@ namespace RestaurantReviews.Client
 
 
             RestaurantDataAccess access = new RestaurantDataAccess();
-            
+            Logger log = LogManager.GetLogger("foo");
             
             List<Restaurant> show = (List<Restaurant>)access.ShowRestaurants();
-            var sortTop = Sort1.SortTop3Rating(show);
-            foreach(Restaurant rest in sortTop)
+           // var sortTop = Sort1.SortTop3Rating(show);
+            foreach(Restaurant rest in show)
             {
-                Console.WriteLine("Restaurant name: " + rest.Name + " AVG Rating: " + rest.AvgRating);
+                Console.WriteLine("Restaurant name: " + rest.Name );
             }
-
+            log.Trace("this ran");
         }
     }
 }
