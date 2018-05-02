@@ -53,36 +53,32 @@ namespace RestaurantReviews.Client
 
 
             RestaurantDataAccess access = new RestaurantDataAccess();
-            var show = access.SortTop3Rating();
+            //var show = access.SortTop3Rating();
 
-            foreach(Restaurant rest in show)
+            //foreach(Restaurant rest in show)
+            //{
+            //    Console.WriteLine("Restaurant name: " + rest.Name + " AVG Rating: " + rest.AvgRating);
+            //}
+
+
+
+
+            //}
+
+            var sortedAscend = access.SortAscending();
+            foreach (Restaurant rest in sortedAscend)
             {
-                Console.WriteLine("Restaurant name: " + rest.Name + " AVG Rating: " + rest.AvgRating);
+                Console.WriteLine("Restaurant name: " + rest.Name);
             }
-               
 
-            
+            var sortedDescend = access.SortDescending();
+            foreach (Restaurant rest in sortedDescend)
+            {
+                Console.WriteLine("Restaurant name: " + rest.Name);
+            }
 
-            //}
-           
-            //var sortedAscend = Sort.SortAscending();
-            //foreach (RestaurantReviews.DAL.Restaurant rest in sortedAscend)
-            //{
-            //    Console.WriteLine("Restaurant name: " + rest.Name);
-           // }
 
-            //var sortedDescend = Sort.SortDescending();
 
-            //foreach (RestaurantReviews.DAL.Restaurant rest in sortedDescend)
-            //{
-            //    Console.WriteLine("Restaurant name: " + rest.Name);
-            //}
-
-            //var topRating = Sort.SortTop3Rating();
-            //foreach(RestaurantReviews.DAL.Restaurant rest in topRating)
-            //{
-               
-                
             //     Console.WriteLine("Restaurant name: " + rest.Name + " Average Rating: " + rest.AvgRating);
             //}
             //// foreach (RestaurantReviews.DAL.Restaurant rest in restaurantCRUD.ShowRestaurants())

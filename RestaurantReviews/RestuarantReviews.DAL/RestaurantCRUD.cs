@@ -67,9 +67,16 @@ namespace RestuarantReviews.DAL
                 PhoneNumber = restaurant.PhoneNumber,
                 State = restaurant.State,
                 Id = restaurant.Id,
-                Name = restaurant.Name,
-                AvgRating = (double)(restaurant.AvgRating)
+                Name = restaurant.Name
             };
+                if (restaurant.AvgRating is null) {
+                rest.AvgRating = 0;
+                }
+                 else
+                {
+                rest.AvgRating = (double)(restaurant.AvgRating);
+                }
+            
 
             return rest;
         }
